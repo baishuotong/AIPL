@@ -6,6 +6,15 @@ metapath-based technology to incorporate crucial information transmitting among 
 suggest whether there could be a link.
 ## Environment
 AIPL is implemented by PyTorch over a server equipped with NVIDIA GTX 1060 GPU (3G memory).
+## Dependencies
+- python 3.7.3
+- PyTorch 1.13.1
+- NumPy 1.21.5
+- Pandas 1.3.4
+- scikit-learn 1.0.2
+- scipy 1.7.3
+- DGL 0.6.1
+- NetworkX 2.6.3
 ## File Introduction
 ### Dataset
 We release our annotated dataset in this file dir.
