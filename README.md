@@ -27,14 +27,28 @@ Annotated dataset based on repositories facebook_react and vuejs/vue <br />
 - __adjM.npz__ The adjacency matrix of heterogeneous graph <br />
 ### Code
 - __baseline__
-The code of our baselines, including iLinker, A-M, random walk, R-GCN and HAN.<br />
+The code of our baselines, including iLinker, A-M, random walk, metapath2vec, R-GCN, GTN, Simple-HGN, HGT, HAN, Sehgnn, and MECCH.<br />
 - __AIPL__
 The code of AIPL, please read the following introduction for a better understanding. <br />
 ## Code Functions
 The relevant codes of our method include building heterogeneous graph, constrcuting metapath and training graph-based model. <br />
-```build_graph.py``` The code related to the heterogeneous graph building. User can construct the heterogeneous graph based on our datasets by running build_graph.py. <br />
-```construct_metapath.py``` The code related to the metapath construction. User can establish all metapath instances by running construct_metapath.py. <br />
-```AIPL_main.py``` The code related to the model training. User can train and evaluate AIPL by running magnn_main.py_. <br />
+The first step is to run ```build_graph.py``` . The second step is to run ```construct_metapath.py```. The third strp is to run ```AIPL_main.py``` <br />
+The detailed explanations are as follows:<br /> 
+```build_graph.py```  <br />
+The code snippet constructs a heterogeneous graph and generates node features for users, repositories (repos), issues, and pull requests (PRs).<br />
+It loads data related to various relationships like user-repo, user-issue, user-PR, repo-repo, repo-issue, repo-PR, issue-issue, issue-PR, and PR-PR from corresponding directories and creates an adjacency matrix (adjM).<br /> 
+Additionally, it extracts feature vectors such as title vectors from CSV files to create features for repos, issues, and PRs. <br />
+The code then saves the adjacency matrix and node features in numpy arrays for further analysis. <br />
+```construct_metapath.py``` <br />
+The code first loads data from various edge and index files, including user-repo, user-issue, user-pr, repo-repo, repo-issue, repo-pr, issue-issue, issue-pr, and pr-pr.  <br />
+It then loads adjacency matrices and organizes them into lists based on different node types such as users, repositories, issues, and prs.   <br />
+Next, the code generates expected metapaths based on predefined patterns. These metapaths are then mapped to corresponding indices and stored in pickle files, numpy arrays, and adjacency lists for further analysis and processing. <br />
+```AIPL_main.py```  <br />
+The code is related to the model training and model inferences. User can train and evaluate AIPL by running ```AIPL_main.py```. <br />
+The script handles data loading, model setup, training with early stopping, and evaluation using metrics like accuracy, precision, recall, and F1-score. <br />
+Specifically, the functions of loading data and batching are called using the files ```data.py```, ```preprocess.py```, and ```tools.py``` in the 'utils' folder.  <br />
+Regarding the construction of the AIPL model, it includes intra-metapath aggregation, inter-metapath aggregation, and attention mechanism.  <br />
+These codes are presented in the ```base_magnn.py``` and ```magnn_lp.py``` under the 'magnn_model' directory, directly called by 'AIPL_main'." <br />
 ## Example Presentation
 1. Example 1
 ![image](https://github.com/baishuotong/AIPL/assets/38210633/74e60014-6fd4-485f-babb-e86bdc96bfd8)
