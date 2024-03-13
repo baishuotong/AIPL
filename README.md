@@ -58,4 +58,5 @@ These codes are presented in the ```base_magnn.py``` and ```magnn_lp.py``` under
 ![image](https://github.com/baishuotong/AIPL/assets/38210633/39fce051-8c9d-432c-8ba0-fbb25fd3e2c9)
 
 ## Copyright
+
 All copyright of the tool is owned by the author of the paper.
