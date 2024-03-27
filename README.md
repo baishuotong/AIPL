@@ -4,8 +4,11 @@ Here is the relevant open-source code for the article titled “Improving Issue-
 In this work, we designe an approach, named AIPL, capable of predicting Issue-PR links on GitHub. It leverages the heterogeneous graph to model multi-type GitHub data and employ the
 metapath-based technology to incorporate crucial information transmitting among multi-type data. When given a pair of an issue and a PR, AIPL can
 suggest whether there could be a link.
+
+<img src="https://github.com/baishuotong/AIPL/assets/38210633/cc562d82-f415-4108-801c-e561dad5e7e0" width="400px">
+
 ## Environment
-AIPL is implemented by PyTorch over a server equipped with NVIDIA GTX 1060 GPU (3G memory).
+AIPL is implemented by PyTorch over a server equipped with NVIDIA GTX 1060 GPU.
 ## Dependencies
 - python 3.7.3
 - PyTorch 1.13.1
