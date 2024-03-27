@@ -52,6 +52,8 @@ The script handles data loading, model setup, training with early stopping, and 
 Specifically, the functions of loading data and batching are called using the files ```data.py```, ```preprocess.py```, and ```tools.py``` in the 'utils' folder.  <br />
 Regarding the construction of the AIPL model, it includes intra-metapath aggregation, inter-metapath aggregation, and attention mechanism.  <br />
 These codes are presented in the ```base_magnn.py``` and ```magnn_lp.py``` under the 'magnn_model' directory, directly called by 'AIPL_main'." <br />
+
+Also, you can set the series of parameters in this py file, including learning_rate, epoch_number, drop_out, attention head number, instance encoder. <br />
 ## Example Presentation
 1. Example 1
 ![image](https://github.com/baishuotong/AIPL/assets/38210633/74e60014-6fd4-485f-babb-e86bdc96bfd8)
