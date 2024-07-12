@@ -26,8 +26,9 @@ Annotated dataset based on repositories facebook_react and vuejs/vue <br />
 - __Index__  Information of nodes and edges on heterogeneous graph <br />
 - __Features__ Embeddings of nodes <br />
 - __Training set& Test set__ Annotated dataset <br />
-- __Metapath__ Information of metapaths <br />
 - __adjM.npz__ The adjacency matrix of heterogeneous graph <br />
+
+Note that, all the files regarding metapaths are so big that it's hard to upload them to this open-source repository. However, all the required files can be obtained by running the file ```construct_metapath.py```.
 ### Code
 - __baseline__
 The code of our baselines, including iLinker, A-M, random walk, metapath2vec, R-GCN, GTN, Simple-HGN, HGT, HAN, Sehgnn, and MECCH.<br />
